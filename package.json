@@ -1,0 +1,26 @@
+{
+  "name": "js-tdd",
+  "version": "1.0.0",
+  "description": "Biblioteca sobre meus estudos de TDD com JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iordneto/jss-tdd.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "library",
+    "javascript",
+    "test"
+  ],
+  "author": "Iord Neto <iordneto95@gmail.com> (https://iordneto.com.br/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iordneto/jss-tdd/issues"
+  },
+  "homepage": "https://github.com/iordneto/jss-tdd#readme"
+}
