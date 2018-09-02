@@ -4,6 +4,7 @@
   "description": "Biblioteca sobre meus estudos de TDD com JavaScript",
   "main": "index.js",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint src/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/iordneto/jss-tdd/issues"
   },
-  "homepage": "https://github.com/iordneto/jss-tdd#readme"
+  "homepage": "https://github.com/iordneto/jss-tdd#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
 }
