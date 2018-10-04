@@ -4,8 +4,21 @@
   "description": "Biblioteca sobre meus estudos de TDD com JavaScript",
   "main": "index.js",
   "scripts": {
+    "prepush": "npm run lint && npm run test:coverage",
     "lint": "./node_modules/.bin/eslint src/*.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --reporter=nyan --require babel-register",
+    "test:tdd": "npm test -- --watch",
+    "test:coverage": "nyc npm test"
+  },
+  "nyc": {
+    "functions": 80,
+    "lines": 80,
+    "check-coverage": true,
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": "tests/**"
   },
   "repository": {
     "type": "git",
@@ -25,6 +38,9 @@
   },
   "homepage": "https://github.com/iordneto/jss-tdd#readme",
   "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-airbnb-base": "^13.1.0",
@@ -33,6 +49,9 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.11.0",
+    "husky": "^0.14.3",
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1",
     "prettier": "^1.14.2"
   }
 }
